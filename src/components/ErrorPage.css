@@ -1,0 +1,225 @@
+.error-page {
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #0a192f 0%, #203a43 100%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+  }
+  
+  /* Error Content */
+  .error-content {
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+  }
+  
+  .error-number {
+    font-size: 180px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textFloat 3s ease-in-out infinite;
+  }
+  
+  .error-title {
+    font-size: 32px;
+    margin: 20px 0;
+    color: #feca57;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .error-message {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #b8c6db;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+  /* Button Styles */
+  .error-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .error-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .error-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animated Background Elements */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration, 1s) infinite var(--delay, 0s);
+  }
+  
+  .shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: shootingStar 2s linear infinite;
+  }
+  
+  .planet {
+    position: absolute;
+    border-radius: 50%;
+    animation: planetRotate 30s linear infinite;
+  }
+  
+  .planet-1 {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    top: 20%;
+    right: 15%;
+    box-shadow: inset -5px -5px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .planet-2 {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, #48dbfb, #1dd1a1);
+    bottom: 20%;
+    left: 10%;
+    animation-duration: 20s;
+    box-shadow: inset -3px -3px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Animations */
+  @keyframes textFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+  }
+  
+  @keyframes shootingStar {
+    0% {
+      transform: translateX(100vw) translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100vw) translateY(100vh) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes planetRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .error-number {
+      font-size: 120px;
+    }
+    
+    .error-title {
+      font-size: 24px;
+    }
+    
+    .error-message {
+      font-size: 16px;
+    }
+    
+    .error-button {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+    
+    .planet-1 {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .planet-2 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  /* Support for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .error-number,
+    .error-title,
+    .error-message,
+    .error-button,
+    .star,
+    .shooting-star,
+    .planet {
+      animation: none;
+    }
+    
+    .error-button:hover {
+      transform: none;
+    }
+  }

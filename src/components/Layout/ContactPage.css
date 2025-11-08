@@ -1,0 +1,178 @@
+.cp-root {
+  min-height: 100vh;
+  background-color: #e2e2e2;
+  padding: 3rem 1rem;
+
+  & .error-button{
+    position: relative;
+    top: -20px;
+    
+  }
+}
+.cp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cp-hero {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: -35px;
+}
+.cp-hero h1 {
+  font-size: 35px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.cp-hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+.cp-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  
+}
+.cp-panel {
+  position: relative;
+  top: -40px;
+  background: white;
+  border-radius: 18px;
+  height: 70vh;
+  width: 45vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+.cp-panel h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Info Styles */
+.cp-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.cp-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.cp-info-icon {
+  font-size: 20px;
+  color: #4a90e2;
+}
+.cp-info-content h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.cp-info-content p {
+  color: #666;
+  line-height: 1.5;
+}
+.cp-social-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.cp-social-link {
+  color: #4a90e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cp-social-link:hover {
+  color: #357abd;
+}
+
+/* Form Styles */
+.cp-form-field {
+  margin-bottom: 10px;
+}
+.cp-form-field label {
+  display: block;
+  margin-bottom: 2px;
+  color: #333;
+  font-size: 12px;
+}
+.cp-form-field input,
+.cp-form-field textarea {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.cp-form-field input:focus,
+.cp-form-field textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+.cp-submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cp-submit-btn:hover {
+  background-color: #357abd;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1460px) and (max-width: 2560px) {
+  .cp-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cp-panel {
+    width: 30vw;
+  }
+  .cp-root {
+    padding: 2rem 1rem;
+  }
+  .cp-hero h1 {
+    font-size: 2rem;
+  }
+  .cp-panel {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cp-layout {
+    grid-template-columns: 1fr;
+  }
+  .cp-panel {
+    width: 90vw;
+  }
+  .cp-root {
+    padding: 2rem 1rem;
+  }
+  .cp-hero h1 {
+    font-size: 2rem;
+  }
+  .cp-panel {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .cp-hero h1 {
+    font-size: 1.75rem;
+  }
+  .cp-social-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cp-panel {
+    width: 90vw;
+  }
+}

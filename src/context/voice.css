@@ -1,0 +1,35 @@
+.voice-search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+.voice-icon {
+    font-size: 24px;
+    color: #4a4a4a;
+    transition: color 0.3s ease;
+}
+
+.voice-search-btn:hover .voice-icon {
+    color: #007bff;
+}
+
+.voice-search-btn.listening {
+    animation: pulse 1s infinite;
+}
+
+.voice-icon-listening {
+    color: #dc3545;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

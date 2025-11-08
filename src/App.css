@@ -1,0 +1,2441 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+}
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.pro-main-container{
+  display: flex;
+    background-image: linear-gradient(to top ,#d2eab6, #adfcfb);
+  
+}
+.black-container{
+  /* background-image: linear-gradient(to top ,#617b44, #396766); */
+  background-color: #1a1a1a;
+    filter: blur(4px);
+    pointer-events: none;
+}
+.main-container{
+    display: flex;
+    gap: 150px;
+}
+.not-container{
+  display: none;
+}
+
+.box-container{
+    width: 160px;
+    transition: width 0.2s ease-in-out;
+    background-image: linear-gradient(to top ,#c0e893, #9ef8f6);  
+    background-color: rgb(241, 241, 241);
+    height: 93.5vh;
+    margin: -3px 0px;
+    & button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin:5px 10px;
+        display: flex;
+        gap: 15px;
+        font-size: 15px;
+        font-weight: 600;
+
+        & p{
+          position: relative;
+          top: 15px;
+        }
+    }
+
+    & a{
+      text-decoration: none;
+    }
+
+    
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.popup{
+  position: absolute;
+  z-index: 1;
+  left: 35vw;
+  top: 25vh;
+  width: 35vw;
+  height: 45vh;
+  border: 1px solid black;
+  text-align: center;
+  background: #5d5d5d;
+  border-radius: 25px;
+}
+.popupbar{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  & h2{
+    color: #1a1a1a;
+    font-weight: bold;
+  }
+
+  & button{
+    width: 26vw;
+    height: 4vw;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    margin: 2px;
+  }
+  & .last_btn{
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+  }
+}
+.nopopup{
+  display: none;
+}
+.ham-menu{
+  width: 160px;
+  border: none;
+  height: 6.5vh;
+  background: none;
+  position: relative;
+  left: -50px;
+  cursor: pointer;
+}
+.new-menu{
+  background: #9ef8f6;
+  width: 210px;
+
+  & img{
+    position: relative;
+    left: -25px;
+  }
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  & .newDiv{
+    height: 55vh;
+    margin: 10px 0px; 
+  }
+  & .newPage{
+    height: 50px;
+    width: 130px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px;
+
+    & img{
+      width: 30px;
+      height: 30px;
+    }
+
+    & .newChat{
+      position: relative;
+      top: -8px;
+      margin: 6px;
+    }
+  }
+  & .recent{
+    margin: 10px 8px;
+    height: 50vh;
+  }
+
+}
+.top-bar{
+  display: flex;
+  gap: 20px;
+  position: relative;
+  justify-content: flex-end;
+  margin:0px 30px;
+  & button{
+    border: none;
+    outline: none;
+    background: none;
+
+    & img{
+      width: 70px;
+      height: 80px;
+    }
+  }
+}
+h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+h4{
+    font-size: 20px;
+    color: rgb(2, 155, 161);
+    font-weight: 600;
+}
+h5{
+  font-weight: 700;
+  font-size: 30px;
+}
+& h3{
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight:600;
+}
+& h2{
+  color: rgb(74, 79, 171);
+  font-size: 30px;
+  font-weight: 700;
+}
+.main-pages{
+  height: 100vh;
+  width: 90%;
+  text-align: center;
+  
+}
+.head-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  height: 70vh;
+  transition: width 0.2s ease-in-out;
+}
+.head1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+    left: 25px;
+    padding: 10;
+}
+
+
+.input-text {
+    width: 710px;
+    border: 1px solid rgb(100, 96, 96);
+    border-radius: 30px;
+    position: absolute;
+    top: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & input{
+        border: none;
+        height: 60px;
+        outline: none;
+        padding-left: 30px;
+        font-size: 20px;
+        background-color: inherit;
+    }
+    & .search-button{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      padding: 4.1px 3px; 
+      cursor: pointer;
+      border:none;
+      margin:0px 10px;
+      gap: 10px;
+      background: none;
+
+      
+      & img{
+        width: 35px;
+        height: 35px;
+      }
+    }
+}
+& .voice{
+  position: relative;
+  left: 10px;
+}
+input::placeholder{
+    font-size: 20px;
+}
+.search-result{
+  text-align: start;
+  padding: 0 5%;
+  height: 50vh;
+  width: 900px;
+  overflow-y: auto;
+  position: relative;
+  top: 50px;
+
+  & img{
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+.search-result::-webkit-scrollbar{
+  display: none;
+}
+.result-title{
+  margin: 40px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  
+}
+.result-data{
+  display: flex;
+  align-items: start;
+  gap: 20px;
+
+  & p{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+}
+.loader{
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.loader hr{
+  border-radius: 4px;
+  border: none;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #7dbce9,#ffffff,#7dbce9);
+  background-size: 600px 50px;
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+@keyframes loader{
+  0%{
+    background-position: -600px 0px;
+  }
+  100%{
+    background-position: 600px 0px;
+  }
+}
+.main-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.copy-content{
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  top: 8vh;
+  left: 7vw;
+  cursor: pointer;
+}
+.copy-content.copied {
+  color: green;
+  transition: color 0.2s ease;
+}
+.logout{
+  display: flex;
+  gap: 15px;
+  position: relative;
+  top: 10px;
+  left: 15px;
+  & .profile{
+    position: relative;
+    top: 10px;
+  }
+}
+
+/*  Card Css Start */
+.carousel-container {
+    height:0px;
+    position: relative;
+    left: 20px;
+    top: 70px;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .card {
+    width: 270px;
+    height: 120px;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .card-icon {
+    font-size: 24px;
+    color: #666;
+    position: relative;
+    left: -90px;
+    top: 10px;
+  }
+  
+  /* Card color variants */
+  .card-blue {
+    background-color: #f0f7ff;
+  }
+  
+  .card-gray {
+    background-color: #f5f5f5;
+  }
+  
+  .card-green {
+    background-color: #f0fff4;
+  }
+  
+  .card-purple {
+    background-color: #f3f0ff;
+  }
+  
+  .card-pink {
+    background-color: #fff0f7;
+  }
+  
+  .card-yellow {
+    background-color: #fffbf0;
+  }
+  
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .dot-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #3b82f6;
+  }
+
+  /* Cards CSS Ends */
+
+
+  /* Login Page Start */
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+
+    & .error-button{
+      position: relative;
+      top: -280px;
+      left: -350px;
+    }
+  }
+  
+  .login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.5s ease-out;
+
+    & .error-button{
+      position: relative;
+      top: 20px;
+      left: 80px;
+    }
+    & h1 {
+      margin: 0;
+      color: #1a1a1a;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  .subtitle {
+    color: #666;
+    text-align: center;
+    margin: 10px 0 30px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-password:hover {
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #4a90e2;
+  }
+  
+  input.error {
+    border-color: #ff4d4f;
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: #357abd;
+  }
+  
+  .login-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .login-button.loading {
+    background: #357abd;
+    position: relative;
+    cursor: wait;
+  }
+  
+  .signup-prompt {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .signup-prompt a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signup-prompt a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 30px 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    input {
+      padding: 10px 36px;
+      font-size: 14px;
+    }
+  }
+
+  /* Login Page Ends */
+
+  /* Sign Up Page Start */
+
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 5px;
+    
+  }
+  
+  .signup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.5s ease-out;
+
+    & .error-button{
+      position: relative;
+      top: 10px;
+      left: 100px;
+    }
+    & h1 {
+      margin: 0;
+      color: #1a1a1a;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  .subtitle {
+    color: #666;
+    text-align: center;
+    margin: 1px 0 15px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-password:hover {
+    color: #333;
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .password-criteria {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .criterion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .criterion svg {
+    color: #ff4d4f;
+  }
+  
+  .criterion.valid svg {
+    color: #52c41a;
+  }
+  
+  .signup-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .signup-button:hover {
+    background: #5a6fd6;
+  }
+  
+  .signup-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .signup-button.loading {
+    background: #5a6fd6;
+    position: relative;
+    cursor: wait;
+  }
+  
+  .login-prompt {
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .login-prompt a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-prompt a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .signup-box {
+      padding: 30px 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    input {
+      padding: 12px 36px;
+      font-size: 14px;
+    }
+  
+    .password-criteria {
+      font-size: 12px;
+    }
+  }
+
+  /* Sign up Page Ends */
+
+  @media screen and (min-width: 2100px) and (max-width: 2560px) {
+    .box-container {
+        width: 160px;
+    }
+    .head-container {
+      width: 1250px;
+        padding: 1rem;
+        position: relative;
+        left: 400px;
+        top: 50px;
+        text-align: center;
+        & h1{
+          font-size: 150px;
+        }
+
+        & h2{
+          font-size: 68px;
+        }
+        & h5{
+          font-size: 56px;
+        }
+        & h4{
+          font-size: 45px;
+        }
+    }
+    .carousel-container{
+      position: relative;
+      top: 120px;
+      left:295px;
+      /* width: 1500px; */
+    }
+    .cards-container {
+        width: 550px;
+        position: relative;
+    }
+    .input-text {
+        width: 1100px;
+        position: absolute;
+        top: 800px;
+        height: 80px;
+        border-radius: 50px;
+      
+    }
+    .newPage{
+      & img{
+        position: relative;
+        top: 1px;
+      }
+    }
+    .main-logo{
+      position: absolute;
+      left: 190px;
+    }
+    .main-logo-more{
+      position: absolute;
+      left: 250px;  
+    }
+    .popup{
+      left: 30vw;
+      top: 25vh;
+      width: 35vw;
+      height: 58vh;
+    }
+    .popupbar{
+      padding: 20px;
+      & h2{
+        font-size: 52px;
+        color: #1a1a1a;
+        font-weight: bold;
+      }
+      & p{
+        font-size: 28px;
+      }
+    
+      & button{
+        width: 30vw;
+        height: 6vw;
+      }
+      & .last_btn{
+        position: relative;
+        left: -20px;
+      }
+    }
+}
+@media screen and (min-width: 1440px) and (max-width: 2100px) {
+  .box-container {
+      width: 160px;
+  }
+  .head-container {
+    width: 1250px;
+      padding: 1rem;
+      position: relative;
+      left: 50px;
+      top: 50px;
+      text-align: center;
+      & h1{
+        font-size: 90px;
+      }
+
+      & h2{
+        font-size: 58px;
+      }
+      & h5{
+        font-size: 46px;
+      }
+      & h4{
+        font-size: 35px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 120px;
+    left:15px;
+    /* width: 1500px; */
+  }
+  .cards-container {
+      width: 550px;
+      position: relative;
+  }
+  .input-text {
+      width: 800px;
+      position: absolute;
+      top: 800px;
+      height: 80px;
+      border-radius: 50px;
+    
+  }
+  .newPage{
+    & img{
+      position: relative;
+      top: 1px;
+    }
+  }
+  .main-logo{
+    position: absolute;
+    left: 190px;
+  }
+  .main-logo-more{
+    position: absolute;
+    left: 250px;  
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 40vw;
+    height: 54vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 62px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 28px;
+    }
+  
+    & button{
+      width: 32vw;
+      height: 6vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 1026px) and (max-width: 1200px){
+  .search-result{
+    width: 900px;
+  }
+  .input-text{
+    top: 750px;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 30vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 42px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 24px;
+    }
+  
+    & button{
+      width: 42vw;
+      height: 8vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+  
+}
+@media screen and (min-width: 970px) and (max-width: 1025px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        margin: 20px 0; 
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+          justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+      padding: 1rem;
+      position: relative;
+      left: -25px;
+      top: 40px;
+      text-align: center;
+      & h1{
+        font-size: 92px;
+      }
+
+      & h2{
+        font-size: 58px;
+      }
+      & h5{
+        font-size: 48px;
+      }
+      & h4{
+        font-size: 34px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  .carousel-container{
+    position: relative;
+    top: 530px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 550px;
+      & h3{
+        font-size: 18px;
+      }
+  }
+  .input-text {
+      width:720px;
+      position: absolute;
+      top: 1080px;
+      left: 60px;
+    
+  }
+  .search-result{
+    width: 850px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 30vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 42px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 24px;
+    }
+  
+    & button{
+      width: 42vw;
+      height: 8vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 970px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        margin: 20px 0; 
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+          justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+      padding: 1rem;
+      position: relative;
+      left: -25px;
+      top: 40px;
+      text-align: center;
+      & h1{
+        font-size: 92px;
+      }
+
+      & h2{
+        font-size: 58px;
+      }
+      & h5{
+        font-size: 48px;
+      }
+      & h4{
+        font-size: 34px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  .carousel-container{
+    position: relative;
+    top: 470px; 
+    left: 38px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 550px;
+      & h3{
+        font-size: 18px;
+      }
+  }
+  .input-text {
+      width:720px;
+      position: absolute;
+      top: 1080px;
+      left: 20px;
+    
+  }
+  .search-result{
+    width: 850px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 25vw;
+    top: 25vh;
+    width: 50vw;
+    height: 28vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 34px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 20px;
+    }
+  
+    & button{
+      width: 39vw;
+      height: 8vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        margin: 20px 0; 
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+          justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+      padding: 1rem;
+      position: relative;
+      left: -25px;
+      top: 40px;
+      text-align: center;
+      & h1{
+        font-size: 72px;
+      }
+
+      & h2{
+        font-size: 48px;
+      }
+      & h5{
+        font-size: 38px;
+      }
+      & h4{
+        font-size: 28px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  .carousel-container{
+    position: relative;
+    top: 290px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 500px;
+      & h3{
+        font-size: 15px;
+      }
+      & .card-icon{
+        top: 10px;
+        left: -50px;
+      }
+  }
+  .input-text {
+      width: 580px;
+      position: absolute;
+      top: 800px;
+      left: 60px;
+    
+  }
+  .search-result{
+    width: 720px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 34vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 32px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 18px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 720px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+          justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+      padding: 1rem;
+      position: relative;
+      left: -25px;
+      top: 40px;
+      text-align: center;
+      & h1{
+        font-size: 58px;
+      }
+
+      & h2{
+        font-size: 38px;
+      }
+      & h5{
+        font-size: 34px;
+      }
+      & h4{
+        font-size: 28px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  .carousel-container{
+    position: relative;
+    top: 315px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 400px;
+      & h3{
+        font-size: 15px;
+      }
+      & .card-icon{
+        top: 10px;
+        left: -50px;
+      }
+  }
+  .input-text {
+      width: 480px;
+      position: absolute;
+      top: 700px;
+      left: 50px;
+    
+  }
+  .search-result{
+    width: 600px;
+
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 38vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 30px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 18px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 600px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+          justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+      padding: 1rem;
+      position: relative;
+      left: -15px;
+      top: 40px;
+      text-align: center;
+      & h1{
+        font-size: 50px;
+      }
+
+      & h2{
+        font-size: 34px;
+      }
+      & h5{
+        font-size: 28px;
+      }
+      & h4{
+        font-size: 20px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  .carousel-container{
+    position: relative;
+    top: 345px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 342px;
+      & h3{
+        font-size: 15px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .input-text {
+      width: 460px;
+      position: absolute;
+      top: 620px;
+      left: 20px;
+    
+  }
+  .search-result{
+    width: 550px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 38vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 22px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 14px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 490px) and (max-width: 540px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: 25px;
+      top: 80px;
+      text-align: center;
+      & h1{
+        font-size: 38px;
+      }
+
+      & h2{
+        font-size: 28px;
+      }
+      & h5{
+        font-size: 24px;
+      }
+      & h4{
+        font-size: 18px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 155px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 322px;
+      & h3{
+        font-size: 13px;
+      }
+      & .card-icon{
+        top: 10px;
+        left: -40px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 380px;
+      position: absolute;
+      top: 480px;
+      left: 0px;
+    
+  }
+  .search-result{
+    width: 430px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 38vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 22px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 14px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 490px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: 5px;
+      top: 80px;
+      text-align: center;
+      & h1{
+        font-size: 38px;
+      }
+
+      & h2{
+        font-size: 28px;
+      }
+      & h5{
+        font-size: 20px;
+      }
+      & h4{
+        font-size: 16px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 365px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 282px;
+      & h3{
+        font-size: 11px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 340px;
+      position: absolute;
+      top: 580px;
+      left: 20px;
+    
+  }
+  .search-result{
+    width: 400px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 38vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 12px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width: 450px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: -5px;
+      top: 80px;
+      text-align: center;
+      & h1{
+        font-size: 38px;
+      }
+
+      & h2{
+        font-size: 28px;
+      }
+      & h5{
+        font-size: 20px;
+      }
+      & h4{
+        font-size: 16px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 345px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 242px;
+      & h3{
+        font-size: 11px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 340px;
+      position: absolute;
+      top: 660px;
+      left: 10px;
+    
+  }
+  .search-result{
+    width: 350px;
+    
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 30vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 12px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 385px) and (max-width: 410px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: -5px;
+      top: 80px;
+      text-align: center;
+      & h1{
+        font-size: 38px;
+      }
+
+      & h2{
+        font-size: 28px;
+      }
+      & h5{
+        font-size: 20px;
+      }
+      & h4{
+        font-size: 16px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 245px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 242px;
+      & h3{
+        font-size: 11px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 340px;
+      position: absolute;
+      top: 590px;
+      left: -10px;
+    
+  }
+  .search-result{
+    width: 350px;
+    
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 30vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 9px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 385px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: -20px;
+      top: 45px;
+      text-align: center;
+      & h1{
+        font-size: 35px;
+      }
+
+      & h2{
+        font-size: 26px;
+      }
+      & h5{
+        font-size: 18px;
+      }
+      & h4{
+        font-size: 16px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 175px; 
+    left: 18px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 242px;
+      & h3{
+        font-size: 11px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 320px;
+      position: absolute;
+      top: 470px;
+      left: 10px;
+    
+  }
+  .search-result{
+     width: 320px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 37vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 9px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}
+
+@media screen and (min-width: 330px) and (max-width: 358px) {
+  .side{
+    width: 10vw;
+  }
+  .box-container {
+    position: absolute;
+    top: 50px;
+    z-index: 2 ;
+      width: 100vw;
+      height: auto;
+
+      & button{
+        gap: 10px;
+        position: relative;
+        top: 20px;
+      }
+      & .newDiv{
+        display: none;
+      }
+      & div{
+        cursor: pointer;
+        gap: 5px;
+        display: flex;  
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+  }
+  .top-bar{
+    top: -15px;
+  }
+   .new-menu{
+    width: 160px;
+    & img{
+      position: relative;
+      left: 0px;
+    }
+  }
+  .head-container {
+    width: 300px;
+      position: relative;
+      left: -20px;
+      top: 45px;
+      text-align: center;
+      & h1{
+        font-size: 35px;
+      }
+
+      & h2{
+        font-size: 26px;
+      }
+      & h5{
+        font-size: 18px;
+      }
+      & h4{
+        font-size: 16px;
+      }
+  }
+  .carousel-container{
+    position: relative;
+    top: 335px; 
+    left: 8px; 
+  }
+  .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 212px;
+      & h3{
+        font-size: 10px;
+      }
+      & .card-icon{
+        top: 5px;
+        left: -30px;
+      }
+  }
+  .menu{
+    & div{
+      height: 10vh;
+    }
+  }
+  .head1{
+    position: relative;
+    top: 20px;
+    left: 0px;
+    gap: 10px;
+  }
+  
+  .input-text {
+      width: 280px;
+      position: absolute;
+      top: 660px;
+      left: 10px;
+    
+  }
+  .search-result{
+     width: 320px;
+  }
+  .ham-menu{
+    background-color: inherit;
+  }
+  .popup{
+    left: 20vw;
+    top: 25vh;
+    width: 60vw;
+    height: 30vh;
+  }
+  .popupbar{
+    padding: 20px;
+    & h2{
+      font-size: 20px;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+    & p{
+      font-size: 9px;
+    }
+  
+    & button{
+      width: 46vw;
+      height: 10vw;
+    }
+    & .last_btn{
+      position: relative;
+      left: -20px;
+    }
+  }
+}

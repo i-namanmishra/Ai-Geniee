@@ -1,0 +1,112 @@
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .tools-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .tool {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: tool-bounce 1.5s infinite alternate;
+  }
+  
+  .hammer {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' fill='%23333'%3E%3Cpath d='M45.4 37.3L12.7 4.6c-1.2-1.2-3.1-1.2-4.2 0L4.6 8.5c-1.2 1.2-1.2 3.1 0 4.2l32.7 32.7c1.2 1.2 3.1 1.2 4.2 0l3.9-3.9c1.2-1.2 1.2-3.1 0-4.2z'/%3E%3C/svg%3E");
+    animation-delay: -0.5s;
+  }
+  
+  .wrench {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' fill='%23666'%3E%3Cpath d='M42.3 7.7c-4.6-4.6-12.1-4.6-16.7 0-4.1 4.1-4.5 10.5-1.2 15L4.7 42.3c-1.6 1.6-1.6 4.1 0 5.7 1.6 1.6 4.1 1.6 5.7 0l20.6-20.6c4.5 3.3 10.9 2.9 15-1.2 4.6-4.6 4.6-12.1 0-16.7z'/%3E%3C/svg%3E");
+  }
+  
+  .screwdriver {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' fill='%23999'%3E%3Cpath d='M40.4 9.6L30.3 19.7l-10-10L30.4 0c-7.5 0-14.6 3-19.8 8.2-5.5 5.5-8.2 12.8-8.2 20.1 0 2.3.3 4.6.8 6.8l12.5-12.5 10 10-12.5 12.5c2.2.5 4.5.8 6.8.8 7.3 0 14.6-2.7 20.1-8.2C45.7 27.2 48 19.1 46 11.6z'/%3E%3C/svg%3E");
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes tool-bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .construction-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .construction-text span {
+    display: block;
+    animation: text-flicker 1.5s infinite alternate;
+  }
+  
+  @keyframes text-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 0 0 4px rgba(255,255,255,0.6);
+      color: #333;
+    }
+    20%, 24%, 55% {
+      text-shadow: 0 0 4px rgba(255,0,0,0.4);
+      color: #ff4500;
+    }
+  }
+  
+  .coming-soon {
+    font-size: 1.5rem;
+    color: #666;
+    animation: pulse 2s infinite;
+  }
+  .error-button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 480px){
+    .construction-text{
+      font-size: 30px;
+    }
+  }
